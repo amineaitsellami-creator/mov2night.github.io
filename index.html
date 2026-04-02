@@ -34,7 +34,6 @@ body {
   height: 100vh;
 }
 
-/* SMOOTH PAGE TRANSITIONS */
 .page {
   position: absolute;
   inset: 0;
@@ -51,7 +50,6 @@ body {
   transform: scale(1);
 }
 
-/* SIDEBAR NAV */
 .sidebar {
   position: fixed;
   left: 0; top: 0; bottom: 0;
@@ -139,7 +137,6 @@ body {
   pointer-events: none;
 }
 
-/* MAIN CONTENT AREA */
 .main-content {
   margin-left: 80px;
   height: 100vh;
@@ -147,7 +144,6 @@ body {
   overflow: hidden;
 }
 
-/* PAGE: HOME */
 .page-home { background: var(--bg); }
 .hero-full {
   position: relative;
@@ -252,7 +248,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* HERO DOTS + ARROWS */
 .hero-dots {
   position: absolute;
   bottom: 8%; right: 40px;
@@ -293,7 +288,6 @@ body {
   transform: scale(1.1);
 }
 
-/* HORIZONTAL ROW SECTION */
 .section-row {
   padding: 0 40px;
   margin-bottom: 40px;
@@ -333,7 +327,6 @@ body {
 }
 .scroll-row::-webkit-scrollbar { display: none; }
 
-/* MOVIE CARD */
 .mcard {
   flex-shrink: 0;
   width: 200px;
@@ -408,7 +401,6 @@ body {
   font-size: 12px; color: var(--text3);
 }
 
-/* MODERN SEARCH */
 .modern-search {
   position: fixed;
   right: 30px; top: 30px;
@@ -480,7 +472,7 @@ body {
 }
 .search-item:hover { background: rgba(255,255,255,0.04); }
 .search-item img {
-  width: 50px; height: 75px;
+  width: 60px; height: 90px;
   object-fit: cover; border-radius: 8px;
   flex-shrink: 0;
 }
@@ -497,7 +489,6 @@ body {
 }
 .search-overlay.open { opacity: 1; visibility: visible; }
 
-/* GENRE CHIPS */
 .genre-row {
   padding: 0 40px 10px;
   display: flex; gap: 8px;
@@ -525,7 +516,6 @@ body {
   color: white;
 }
 
-/* DETAIL OVERLAY */
 .detail-overlay {
   position: fixed; inset: 0;
   background: var(--bg);
@@ -556,7 +546,7 @@ body {
 }
 .detail-hero {
   position: relative;
-  width: 100%; height: 60vh; min-height: 400px;
+  width: 100%; height: 50vh; min-height: 300px;
 }
 .detail-hero-bg {
   position: absolute; inset: 0;
@@ -570,7 +560,7 @@ body {
 }
 .detail-body {
   max-width: 900px;
-  margin: -120px auto 0;
+  margin: -100px auto 0;
   padding: 0 40px 60px;
   position: relative; z-index: 2;
 }
@@ -594,7 +584,6 @@ body {
 .detail-tags {
   display: flex; gap: 10px; flex-wrap: wrap;
   margin-bottom: 14px;
-  direction: rtl;
 }
 .dtag {
   padding: 5px 14px;
@@ -612,7 +601,6 @@ body {
 .detail-plot {
   font-size: 16px; line-height: 1.9;
   color: var(--text2);
-  direction: rtl; text-align: right;
   margin-bottom: 30px;
 }
 .detail-acts { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 30px; }
@@ -626,42 +614,7 @@ body {
   transition: all 0.3s var(--ease-out-expo);
 }
 .btn-d-play:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(6,182,212,0.3); }
-.btn-d-trailer {
-  padding: 14px 24px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  color: white; font-family: 'Inter', sans-serif;
-  font-size: 14px; font-weight: 500;
-  cursor: pointer; display: flex; align-items: center; gap: 8px;
-  transition: all 0.3s var(--ease-out-expo);
-}
-.btn-d-trailer:hover { background: rgba(255,255,255,0.1); }
 
-/* TV SELECTORS */
-.tv-sel {
-  display: none;
-  gap: 12px; padding: 16px 0;
-  margin-bottom: 20px;
-  align-items: center; flex-wrap: wrap;
-}
-.tv-sel.show { display: flex; }
-.tv-sel label { font-size: 13px; color: var(--text3); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
-.tv-sel select {
-  padding: 10px 16px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  color: white;
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  outline: none; cursor: pointer;
-  transition: all 0.3s;
-}
-.tv-sel select:focus { border-color: var(--accent); }
-.tv-sel select option { background: var(--surface2); color: white; }
-
-/* PLAYER IN DETAIL */
 .detail-player {
   width: 100%;
   aspect-ratio: 16/9;
@@ -672,11 +625,11 @@ body {
   display: none;
 }
 .detail-player.show { display: block; }
-.detail-player iframe {
-  width: 100%; height: 100%; border: none;
+.detail-player video {
+  width: 100%; height: 100%;
+  background: #000;
 }
 
-/* CAST */
 .cast-grid {
   display: flex; gap: 16px;
   overflow-x: auto; padding-bottom: 8px;
@@ -692,11 +645,12 @@ body {
   overflow: hidden;
   margin: 0 auto 8px;
   border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface2);
 }
 .cast-img img { width: 100%; height: 100%; object-fit: cover; }
 .cast-img .empty-c {
   width: 100%; height: 100%;
-  background: var(--surface2);
   display: flex; align-items: center; justify-content: center;
   color: var(--text3); font-size: 20px;
 }
@@ -705,37 +659,6 @@ body {
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
-/* TRAILER MODAL */
-.trailer-modal {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,0.95);
-  z-index: 4000;
-  display: none;
-  align-items: center; justify-content: center;
-  padding: 40px;
-}
-.trailer-modal.show { display: flex; }
-.trailer-modal-close {
-  position: absolute; top: 24px; right: 24px;
-  width: 48px; height: 48px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid var(--border);
-  color: white;
-  cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  transition: all 0.3s;
-}
-.trailer-modal-close:hover { background: var(--accent3); border-color: var(--accent3); }
-.trailer-frame {
-  width: 90%; max-width: 1000px;
-  aspect-ratio: 16/9;
-  border-radius: 16px; overflow: hidden;
-}
-.trailer-frame iframe { width: 100%; height: 100%; border: none; }
-
-/* LOADING */
 .loader-wrap {
   display: flex; align-items: center; justify-content: center;
   padding: 80px; grid-column: 1/-1;
@@ -756,7 +679,6 @@ body {
   40% { transform: scale(1); opacity: 1; }
 }
 
-/* PAGINATION */
 .pagination-row {
   display: flex; align-items: center; justify-content: center;
   gap: 8px; padding: 30px 0 60px;
@@ -781,7 +703,6 @@ body {
 }
 .pbtn:disabled { opacity: 0.2; cursor: not-allowed; }
 
-/* GRID VIEW */
 .grid-view {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -789,7 +710,6 @@ body {
   padding: 0 40px 40px;
 }
 
-/* SCROLL TO TOP */
 .scroll-top {
   position: fixed;
   bottom: 30px; right: 100px;
@@ -809,7 +729,6 @@ body {
 .scroll-top.show { opacity: 1; transform: translateY(0); }
 .scroll-top:hover { transform: translateY(-3px); }
 
-/* NO IMAGE */
 .no-img {
   width: 100%; height: 100%;
   background: var(--surface2);
@@ -817,7 +736,6 @@ body {
   color: var(--text3); font-size: 36px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .sidebar { width: 60px; }
   .sidebar:hover { width: 60px; }
@@ -840,7 +758,7 @@ body {
   .detail-tags { justify-content: center; }
   .detail-stats { justify-content: center; }
   .detail-acts { justify-content: center; }
-  .detail-plot { text-align: center; direction: ltr; }
+  .detail-plot { text-align: center; }
   .modern-search { right: 20px; top: 16px; }
   .search-panel { max-width: 100%; }
   .pagination-row { gap: 6px; }
@@ -854,7 +772,6 @@ body {
 </head>
 <body>
 
-<!-- SIDEBAR -->
 <nav class="sidebar">
   <div class="sidebar-top">
     <div class="logo-wrap">
@@ -865,17 +782,17 @@ body {
       <div class="nav-icon"><i class="fas fa-house"></i></div>
       <span class="nav-label">Home</span>
     </button>
-    <button class="nav-item" data-page="movies" onclick="goPage('movies')">
-      <div class="nav-icon"><i class="fas fa-film"></i></div>
-      <span class="nav-label">Movies</span>
+    <button class="nav-item" data-page="latest" onclick="goPage('latest')">
+      <div class="nav-icon"><i class="fas fa-clock"></i></div>
+      <span class="nav-label">Latest</span>
     </button>
-    <button class="nav-item" data-page="tv" onclick="goPage('tv')">
-      <div class="nav-icon"><i class="fas fa-tv"></i></div>
-      <span class="nav-label">TV Shows</span>
-    </button>
-    <button class="nav-item" data-page="trending" onclick="goPage('trending')">
+    <button class="nav-item" data-page="popular" onclick="goPage('popular')">
       <div class="nav-icon"><i class="fas fa-fire"></i></div>
-      <span class="nav-label">Trending</span>
+      <span class="nav-label">Popular</span>
+    </button>
+    <button class="nav-item" data-page="producers" onclick="goPage('producers')">
+      <div class="nav-icon"><i class="fas fa-building"></i></div>
+      <span class="nav-label">Producers</span>
     </button>
   </div>
   <div class="sidebar-bottom">
@@ -886,23 +803,20 @@ body {
   </div>
 </nav>
 
-<!-- SEARCH -->
 <div class="modern-search">
   <button class="search-trigger" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
 </div>
 <div class="search-overlay" id="searchOverlay" onclick="toggleSearch()"></div>
 <div class="search-panel" id="searchPanel">
   <div class="search-panel-header">
-    <input class="search-panel-input" id="searchInput" placeholder="Type to search..." oninput="handleSearch(this.value)">
+    <input class="search-panel-input" id="searchInput" placeholder="Search videos, producers..." oninput="handleSearch(this.value)">
     <button class="search-panel-close" onclick="toggleSearch()"><i class="fas fa-xmark"></i></button>
   </div>
   <div class="search-panel-body" id="searchResults"></div>
 </div>
 
-<!-- MAIN CONTENT -->
 <div class="main-content">
 
-  <!-- HOME PAGE -->
   <div class="page page-home active" id="pageHome">
     <div class="hero-full" id="heroSection">
       <div class="hero-bg-slider" id="heroBg"></div>
@@ -917,35 +831,29 @@ body {
     <div style="padding-top: 20px;" id="homeRows"></div>
   </div>
 
-  <!-- MOVIES PAGE -->
-  <div class="page page-movies" id="pageMovies">
+  <div class="page page-latest" id="pageLatest">
     <div style="padding-top: 30px;">
-      <div class="genre-row" id="movieGenres"></div>
-      <div class="grid-view" id="movieGrid"></div>
-      <div class="pagination-row" id="moviePag"></div>
+      <div class="genre-row" id="categoryChips"></div>
+      <div class="grid-view" id="latestGrid"></div>
+      <div class="pagination-row" id="latestPag"></div>
     </div>
   </div>
 
-  <!-- TV PAGE -->
-  <div class="page page-tv" id="pageTv">
+  <div class="page page-popular" id="pagePopular">
     <div style="padding-top: 30px;">
-      <div class="genre-row" id="tvGenres"></div>
-      <div class="grid-view" id="tvGrid"></div>
-      <div class="pagination-row" id="tvPag"></div>
+      <div class="grid-view" id="popularGrid"></div>
+      <div class="pagination-row" id="popularPag"></div>
     </div>
   </div>
 
-  <!-- TRENDING PAGE -->
-  <div class="page page-trending" id="pageTrending">
+  <div class="page page-producers" id="pageProducers">
     <div style="padding-top: 30px;">
-      <div class="grid-view" id="trendingGrid"></div>
-      <div class="pagination-row" id="trendingPag"></div>
+      <div class="grid-view" id="producersGrid"></div>
     </div>
   </div>
 
 </div>
 
-<!-- DETAIL OVERLAY -->
 <div class="detail-overlay" id="detailOverlay">
   <button class="detail-close" onclick="closeDetail()"><i class="fas fa-xmark"></i></button>
   <div class="detail-hero" id="detailHero">
@@ -954,57 +862,50 @@ body {
   </div>
   <div class="detail-body">
     <div class="detail-player" id="detailPlayer">
-      <iframe id="playerIframe" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-    </div>
-    <div class="tv-sel" id="tvSel">
-      <label>Season</label>
-      <select id="seasonSel" onchange="updateEpSel()"></select>
-      <label>Episode</label>
-      <select id="epSel" onchange="loadEp()"></select>
+      <video id="playerVideo" controls autoplay playsinline></video>
     </div>
     <div id="detailContent"></div>
   </div>
 </div>
 
-<!-- TRAILER MODAL -->
-<div class="trailer-modal" id="trailerModal">
-  <button class="trailer-modal-close" onclick="closeTrailer()"><i class="fas fa-xmark"></i></button>
-  <div class="trailer-frame">
-    <iframe id="trailerFrame" allowfullscreen allow="autoplay; encrypted-media"></iframe>
-  </div>
-</div>
-
-<!-- SCROLL TOP -->
 <button class="scroll-top" id="scrollTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
 <script>
-const API = 'c4bf0cb03e29e3fe72e44c3f2135b55a';
-const BASE = 'https://api.themoviedb.org/3';
-const IMG = 'https://image.tmdb.org/t/p/w500';
-const ORIG = 'https://image.tmdb.org/t/p/original';
-const AR = 'ar-SA';
-const EN = 'en-US';
+const API_BASE = 'https://steppschuh-json-porn-v1.p.rapidapi.com';
+const API_HEADERS = {
+  'Content-Type': 'application/json',
+  'x-rapidapi-host': 'steppschuh-json-porn-v1.p.rapidapi.com',
+  'x-rapidapi-key': 'YOUR_RAPIDAPI_KEY'
+};
 
-let currentPage = 1;
-let currentGenre = null;
+let currentPage = 'home';
 let heroIdx = 0;
 let heroItems = [];
 let heroTimer = null;
 let searchTimer = null;
 let currentDetail = null;
-let mGenreMap = {};
-let tGenreMap = {};
-let activePage = 'home';
-let mPage = 1, tPage = 1, trPage = 1;
+let activeCategory = null;
+let latestOffset = 0;
+let popularOffset = 0;
+let producers = [];
 
-// PAGE NAV
+const ITEMS_PER_PAGE = 24;
+
+async function apiFetch(endpoint, params = {}) {
+  const url = new URL(`${API_BASE}${endpoint}`);
+  Object.entries(params).forEach(([k, v]) => { if (v) url.searchParams.append(k, v); });
+  const res = await fetch(url.toString(), { headers: API_HEADERS });
+  if (!res.ok) throw new Error(`API error: ${res.status}`);
+  return res.json();
+}
+
 function goPage(page) {
-  if (page === activePage) return;
-  activePage = page;
+  if (page === currentPage) return;
+  currentPage = page;
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.toggle('active', n.dataset.page === page));
   
-  const pages = { home: 'pageHome', movies: 'pageMovies', tv: 'pageTv', trending: 'pageTrending' };
+  const pages = { home: 'pageHome', latest: 'pageLatest', popular: 'pagePopular', producers: 'pageProducers' };
   const el = document.getElementById(pages[page]);
   if (el) {
     el.classList.add('active');
@@ -1012,72 +913,69 @@ function goPage(page) {
   }
   
   if (page === 'home') loadHome();
-  else if (page === 'movies') loadMovies();
-  else if (page === 'tv') loadTv();
-  else if (page === 'trending') loadTrending();
+  else if (page === 'latest') loadLatest();
+  else if (page === 'popular') loadPopular();
+  else if (page === 'producers') loadProducersPage();
 }
 
-// GENRES
-async function loadGenres(type) {
-  try {
-    const r = await fetch(`${BASE}/genre/${type}/list?api_key=${API}&language=${AR}`);
-    const d = await r.json();
-    const map = type === 'movie' ? mGenreMap : tGenreMap;
-    d.genres.forEach(g => map[g.id] = g.name);
-  } catch(e) {}
-}
-
-function renderGenreChips(containerId, map, type) {
-  const el = document.getElementById(containerId);
-  let h = `<button class="gchip active" onclick="filterGenre(null, '${type}', '${containerId}')">All</button>`;
-  Object.entries(map).forEach(([id, name]) => {
-    h += `<button class="gchip" onclick="filterGenre(${id}, '${type}', '${containerId}')">${name}</button>`;
-  });
-  el.innerHTML = h;
-}
-
-function filterGenre(id, type, containerId) {
-  currentGenre = id;
-  if (type === 'movie') { mPage = 1; loadMovies(); }
-  else if (type === 'tv') { tPage = 1; loadTv(); }
-  
-  document.querySelectorAll(`#${containerId} .gchip`).forEach(c => c.classList.remove('active'));
-  event.target.classList.add('active');
-}
-
-// MOVIE CARD HTML
-function cardHTML(item, type) {
-  const title = item.title || item.name || 'Unknown';
-  const year = (item.release_date || item.first_air_date || '').slice(0,4);
-  const poster = item.poster_path ? IMG + item.poster_path : '';
-  const rating = item.vote_average ? item.vote_average.toFixed(1) : '—';
-  const mt = type || item.media_type || (item.first_air_date ? 'tv' : 'movie');
+function videoCardHTML(scene) {
+  const title = scene.title || scene.sceneName || scene.name || 'Untitled';
+  const thumb = scene.thumb || scene.previewImage || scene.thumbnail || scene.poster || '';
+  const dur = scene.duration || scene.lengthSeconds || '';
+  const views = scene.views || scene.viewCount || '';
+  const date = scene.date || scene.datePublished || '';
+  const prod = scene.producerName || scene.producer || scene.studio || '';
+  const vidUrl = scene.videoUrl || scene.url || scene.src || '';
   
   return `
-    <div class="mcard" onclick="openDetail(${item.id}, '${mt}')">
-      <div class="mcard-poster">
-        ${poster ? `<img src="${poster}" alt="${title}" loading="lazy">` : `<div class="no-img"><i class="fas fa-film"></i></div>`}
-        <div class="mcard-rating"><i class="fas fa-star"></i> ${rating}</div>
-        <div class="mcard-type">${mt === 'tv' ? 'SERIES' : '4K'}</div>
+    <div class="mcard" onclick="openDetail(${JSON.stringify(scene).replace(/"/g, '&quot;')})">
+      <div class="mcard-poster" style="height:280px;">
+        ${thumb ? `<img src="${thumb}" alt="${title}" loading="lazy" onerror="this.style.display='none'">` : `<div class="no-img"><i class="fas fa-play"></i></div>`}
+        ${views ? `<div class="mcard-rating"><i class="fas fa-eye"></i> ${formatViews(views)}</div>` : ''}
+        <div class="mcard-type">HD</div>
         <div class="mcard-play"><i class="fas fa-play" style="margin-left:2px;"></i></div>
       </div>
       <div class="mcard-info">
         <h3>${title}</h3>
-        <span>${year} · ${mt === 'tv' ? 'TV' : 'Movie'}</span>
+        <span>${prod || ''}${prod && date ? ' · ' : ''}${date || ''}${dur ? ` · ${dur}` : ''}</span>
       </div>
     </div>
   `;
 }
 
-// HERO
+function formatViews(v) {
+  if (!v) return '';
+  if (typeof v === 'string' && v.includes(',')) return v;
+  const n = parseInt(v);
+  if (isNaN(n)) return v;
+  if (n >= 1000000) return (n/1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n/1000).toFixed(1) + 'K';
+  return n.toString();
+}
+
 async function loadHero() {
   try {
-    const r = await fetch(`${BASE}/trending/movie/week?api_key=${API}&language=${EN}`);
-    const d = await r.json();
-    heroItems = d.results.slice(0, 6);
-    renderHero();
-    startHeroTimer();
-  } catch(e) {}
+    const data = await apiFetch('/scenes/', { count: 12, offset: 0, sort: 'date' });
+    const scenes = data.scenes || data.results || data.videos || [];
+    heroItems = scenes.filter(s => s.thumb || s.previewImage || s.thumbnail || s.poster).slice(0, 6);
+    if (heroItems.length > 0) renderHero();
+    else {
+      document.getElementById('heroBg').innerHTML = '<div class="hero-slide-img active"><div style="width:100%;height:100%;background:linear-gradient(135deg,#0a0a0a,#1a1a1a);"></div></div>';
+      document.getElementById('heroInfo').innerHTML = `
+        <div class="hero-tag"><i class="fas fa-bolt"></i> Welcome</div>
+        <h1 class="hero-title">Movs2nighT</h1>
+        <p class="hero-desc">Browse thousands of premium videos. Search, filter, and enjoy.</p>
+      `;
+    }
+  } catch(e) {
+    console.error('Hero load failed:', e);
+    document.getElementById('heroBg').innerHTML = '<div class="hero-slide-img active"><div style="width:100%;height:100%;background:linear-gradient(135deg,#0a0a0a,#1a1a1a);"></div></div>';
+    document.getElementById('heroInfo').innerHTML = `
+      <div class="hero-tag"><i class="fas fa-bolt"></i> Welcome</div>
+      <h1 class="hero-title">Movs2nighT</h1>
+      <p class="hero-desc">Your premium video streaming destination.</p>
+    `;
+  }
 }
 
 function renderHero() {
@@ -1085,7 +983,7 @@ function renderHero() {
   const dots = document.getElementById('heroDots');
   bg.innerHTML = heroItems.map((item, i) => `
     <div class="hero-slide-img ${i === 0 ? 'active' : ''}">
-      <img src="${ORIG}${item.backdrop_path}" alt="" loading="${i===0?'eager':'lazy'}">
+      <img src="${item.thumb || item.previewImage || item.thumbnail || item.poster}" alt="" loading="${i===0?'eager':'lazy'}">
     </div>
   `).join('');
   dots.innerHTML = heroItems.map((_, i) => 
@@ -1097,23 +995,23 @@ function renderHero() {
 function updateHeroInfo(idx) {
   const item = heroItems[idx];
   if (!item) return;
-  const title = item.title || 'Unknown';
-  const year = item.release_date?.slice(0,4) || '';
-  const rating = item.vote_average ? item.vote_average.toFixed(1) : '—';
-  const genres = (item.genre_ids || []).slice(0,3).map(id => mGenreMap[id]).filter(Boolean).join(' · ');
+  const title = item.title || item.sceneName || item.name || 'Untitled';
+  const prod = item.producerName || item.producer || item.studio || '';
+  const views = item.views || item.viewCount || '';
+  const dur = item.duration || item.lengthSeconds || '';
+  const desc = item.description || item.synopsis || '';
   
   document.getElementById('heroInfo').innerHTML = `
-    <div class="hero-tag"><i class="fas fa-bolt"></i> Trending Now</div>
+    <div class="hero-tag"><i class="fas fa-bolt"></i> Featured</div>
     <h1 class="hero-title">${title}</h1>
     <div class="hero-details">
-      <span class="star"><i class="fas fa-star"></i> ${rating}</span>
-      <span>${year}</span>
-      <span>${genres}</span>
+      ${prod ? `<span>${prod}</span>` : ''}
+      ${views ? `<span><i class="fas fa-eye" style="margin-right:4px;"></i>${formatViews(views)} views</span>` : ''}
+      ${dur ? `<span><i class="fas fa-clock" style="margin-right:4px;"></i>${dur}</span>` : ''}
     </div>
-    <p class="hero-desc">${item.overview || ''}</p>
+    ${desc ? `<p class="hero-desc">${desc}</p>` : ''}
     <div class="hero-actions">
-      <button class="btn-play-main" onclick="openDetail(${item.id}, 'movie')"><i class="fas fa-play"></i> Watch Now</button>
-      <button class="btn-detail-main" onclick="openDetail(${item.id}, 'movie')"><i class="fas fa-circle-info"></i> More Info</button>
+      <button class="btn-play-main" onclick='openDetail(${JSON.stringify(item).replace(/'/g, "\\'")})'><i class="fas fa-play"></i> Watch Now</button>
     </div>
   `;
 }
@@ -1126,276 +1024,319 @@ function goHeroSlide(idx) {
 }
 function heroNext() { goHeroSlide((heroIdx + 1) % heroItems.length); }
 function heroPrev() { goHeroSlide((heroIdx - 1 + heroItems.length) % heroItems.length); }
-function startHeroTimer() { clearInterval(heroTimer); heroTimer = setInterval(heroNext, 7000); }
+function startHeroTimer() { clearInterval(heroTimer); heroTimer = setInterval(heroNext, 8000); }
 
-// HOME
 async function loadHome() {
   const container = document.getElementById('homeRows');
-  container.innerHTML = '';
-  if (!Object.keys(mGenreMap).length) { await loadGenres('movie'); }
+  container.innerHTML = '<div class="loader-wrap"><div class="loader-dots"><span></span><span></span><span></span></div></div>';
   
   const rows = [
-    { title: 'Popular Movies', url: `${BASE}/movie/popular?api_key=${API}&language=${EN}&page=1`, type: 'movie' },
-    { title: 'Top Rated', url: `${BASE}/movie/top_rated?api_key=${API}&language=${EN}&page=1`, type: 'movie' },
-    { title: 'Popular TV Shows', url: `${BASE}/tv/popular?api_key=${API}&language=${EN}&page=1`, type: 'tv' },
+    { title: 'Latest Uploads', params: { count: 12, offset: 0, sort: 'date' } },
+    { title: 'Most Viewed', params: { count: 12, offset: 0, sort: 'views' } },
   ];
   
+  let html = '';
   for (const row of rows) {
     try {
-      const r = await fetch(row.url);
-      const d = await r.json();
-      if (d.results.length) {
-        container.innerHTML += `
+      const data = await apiFetch('/scenes/', row.params);
+      const scenes = data.scenes || data.results || data.videos || [];
+      if (scenes.length) {
+        html += `
           <div class="section-row visible">
             <div class="section-label">
               <h2>${row.title}</h2>
             </div>
             <div class="scroll-row">
-              ${d.results.map(item => cardHTML(item, row.type)).join('')}
+              ${scenes.map(s => videoCardHTML(s)).join('')}
             </div>
           </div>
         `;
       }
-    } catch(e) {}
+    } catch(e) {
+      console.error('Row load error:', e);
+    }
   }
+  
+  if (!html) html = '<div class="loader-wrap" style="grid-column:1/-1;color:var(--text3);">Failed to load content</div>';
+  container.innerHTML = html;
 }
 
-// MOVIES
-async function loadMovies() {
-  if (!Object.keys(mGenreMap).length) { await loadGenres('movie'); }
-  renderGenreChips('movieGenres', mGenreMap, 'movie');
-  const grid = document.getElementById('movieGrid');
+async function loadLatest() {
+  if (activeCategory) await loadLatestByCategory();
+  else await loadLatestGeneral();
+}
+
+async function loadLatestByCategory() {
+  const grid = document.getElementById('latestGrid');
   grid.innerHTML = '<div class="loader-wrap"><div class="loader-dots"><span></span><span></span><span></span></div></div>';
   
   try {
-    let url;
-    if (currentGenre && activePage === 'movies') {
-      url = `${BASE}/discover/movie?api_key=${API}&language=${EN}&with_genres=${currentGenre}&page=${mPage}`;
-    } else {
-      url = `${BASE}/movie/popular?api_key=${API}&language=${EN}&page=${mPage}`;
-    }
-    const r = await fetch(url);
-    const d = await r.json();
-    if (d.results.length) {
-      grid.innerHTML = d.results.map(item => cardHTML(item, 'movie')).join('');
+    const data = await apiFetch('/scenes/', {
+      count: ITEMS_PER_PAGE,
+      offset: latestOffset,
+      sort: 'date',
+      category: activeCategory
+    });
+    const scenes = data.scenes || data.results || data.videos || [];
+    if (scenes.length) {
+      grid.innerHTML = scenes.map(s => videoCardHTML(s)).join('');
     } else {
       grid.innerHTML = '<div class="loader-wrap" style="grid-column:1/-1;color:var(--text3);">No results</div>';
     }
-    renderPag('moviePag', d.total_pages, mPage, 'm');
+    renderPagLatest('latestPag', data.count || scenes.length, latestOffset, 'l');
   } catch(e) {
     grid.innerHTML = '<div class="loader-wrap" style="grid-column:1/-1;color:var(--text3);">Error loading</div>';
   }
 }
 
-// TV
-async function loadTv() {
-  if (!Object.keys(tGenreMap).length) { await loadGenres('tv'); }
-  renderGenreChips('tvGenres', tGenreMap, 'tv');
-  const grid = document.getElementById('tvGrid');
+async function loadLatestGeneral() {
+  const grid = document.getElementById('latestGrid');
   grid.innerHTML = '<div class="loader-wrap"><div class="loader-dots"><span></span><span></span><span></span></div></div>';
   
   try {
-    let url;
-    if (currentGenre && activePage === 'tv') {
-      url = `${BASE}/discover/tv?api_key=${API}&language=${EN}&with_genres=${currentGenre}&page=${tPage}`;
-    } else {
-      url = `${BASE}/tv/popular?api_key=${API}&language=${EN}&page=${tPage}`;
-    }
-    const r = await fetch(url);
-    const d = await r.json();
-    if (d.results.length) {
-      grid.innerHTML = d.results.map(item => cardHTML(item, 'tv')).join('');
+    const data = await apiFetch('/scenes/', { count: ITEMS_PER_PAGE, offset: latestOffset, sort: 'date' });
+    const scenes = data.scenes || data.results || data.videos || [];
+    if (scenes.length) {
+      grid.innerHTML = scenes.map(s => videoCardHTML(s)).join('');
     } else {
       grid.innerHTML = '<div class="loader-wrap" style="grid-column:1/-1;color:var(--text3);">No results</div>';
     }
-    renderPag('tvPag', d.total_pages, tPage, 't');
+    renderPagLatest('latestPag', data.count || scenes.length, latestOffset, 'l');
   } catch(e) {
     grid.innerHTML = '<div class="loader-wrap" style="grid-column:1/-1;color:var(--text3);">Error loading</div>';
   }
 }
 
-// TRENDING
-async function loadTrending() {
-  const grid = document.getElementById('trendingGrid');
+async function loadPopular() {
+  const grid = document.getElementById('popularGrid');
   grid.innerHTML = '<div class="loader-wrap"><div class="loader-dots"><span></span><span></span><span></span></div></div>';
   
   try {
-    const r = await fetch(`${BASE}/trending/all/week?api_key=${API}&language=${EN}&page=${trPage}`);
-    const d = await r.json();
-    if (d.results.length) {
-      grid.innerHTML = d.results.map(item => {
-        const t = item.media_type === 'tv' ? 'tv' : 'movie';
-        return cardHTML(item, t);
-      }).join('');
+    const data = await apiFetch('/scenes/', { count: ITEMS_PER_PAGE, offset: popularOffset, sort: 'views' });
+    const scenes = data.scenes || data.results || data.videos || [];
+    if (scenes.length) {
+      grid.innerHTML = scenes.map(s => videoCardHTML(s)).join('');
     } else {
       grid.innerHTML = '<div class="loader-wrap" style="grid-column:1/-1;color:var(--text3);">No results</div>';
     }
-    renderPag('trendingPag', d.total_pages, trPage, 'tr');
+    renderPagLatest('popularPag', data.count || scenes.length, popularOffset, 'p');
   } catch(e) {
     grid.innerHTML = '<div class="loader-wrap" style="grid-column:1/-1;color:var(--text3);">Error loading</div>';
   }
 }
 
-// PAGINATION
-function renderPag(containerId, total, current, prefix) {
+function renderPagLatest(containerId, count, offset, prefix) {
   const el = document.getElementById(containerId);
-  if (total <= 1) { el.innerHTML = ''; return; }
-  let h = `<button class="pbtn" onclick="changePage('${prefix}', ${current-1})" ${current===1?'disabled':''}><i class="fas fa-chevron-left"></i></button>`;
+  const currentPage = (offset / ITEMS_PER_PAGE) + 1;
+  const hasMore = count >= ITEMS_PER_PAGE;
   
-  const s = Math.max(1, current-2);
-  const e = Math.min(total, current+2);
-  if (s > 1) h += `<button class="pbtn" onclick="changePage('${prefix}', 1)">1</button>`;
-  if (s > 2) h += `<span style="color:var(--text3)">…</span>`;
+  if (!hasMore && offset === 0) { el.innerHTML = ''; return; }
   
-  for (let i = s; i <= e; i++) {
-    h += `<button class="pbtn ${i===current?'active':''}" onclick="changePage('${prefix}', ${i})">${i}</button>`;
-  }
-  if (e < total-1) h += `<span style="color:var(--text3)">…</span>`;
-  if (e < total) h += `<button class="pbtn" onclick="changePage('${prefix}', ${total})">${total}</button>`;
-  
-  h += `<button class="pbtn" onclick="changePage('${prefix}', ${current+1})" ${current===total?'disabled':''}><i class="fas fa-chevron-right"></i></button>`;
+  let h = `<button class="pbtn" onclick="changeOffset('${prefix}', ${offset - ITEMS_PER_PAGE})" ${offset===0?'disabled':''}><i class="fas fa-chevron-left"></i></button>`;
+  h += `<span style="color:var(--text2);margin:0 8px;">Page ${currentPage}</span>`;
+  h += `<button class="pbtn" onclick="changeOffset('${prefix}', ${offset + ITEMS_PER_PAGE})" ${!hasMore?'disabled':''}><i class="fas fa-chevron-right"></i></button>`;
   el.innerHTML = h;
 }
 
-function changePage(prefix, page) {
-  if (page < 1) return;
-  if (prefix === 'm') { mPage = page; loadMovies(); }
-  else if (prefix === 't') { tPage = page; loadTv(); }
-  else if (prefix === 'tr') { trPage = page; loadTrending(); }
-  document.getElementById(`page${prefix==='m'?'Movies':prefix==='t'?'Tv':'Trending'}`).scrollTop = 0;
+function changeOffset(prefix, newOffset) {
+  if (newOffset < 0) return;
+  if (prefix === 'l') { latestOffset = newOffset; loadLatest(); }
+  else if (prefix === 'p') { popularOffset = newOffset; loadPopular(); }
+  const el = document.querySelector('.page.active');
+  if (el) el.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// DETAIL
-async function openDetail(id, type) {
-  currentDetail = { id, type };
-  const overlay = document.getElementById('detailOverlay');
-  overlay.classList.add('open');
-  document.getElementById('playerIframe').src = '';
-  document.getElementById('detailPlayer').classList.remove('show');
-  document.getElementById('tvSel').classList.remove('show');
-  document.body.style.overflow = 'hidden';
+function filterCategory(cat) {
+  activeCategory = cat;
+  latestOffset = 0;
+  document.querySelectorAll('#categoryChips .gchip').forEach(c => c.classList.remove('active'));
+  event.target.classList.add('active');
+  loadLatest();
+}
+
+async function loadCategories() {
+  const el = document.getElementById('categoryChips');
+  try {
+    const data = await apiFetch('/categories/', { count: 50 });
+    const cats = data.categories || data.results || [];
+    if (cats.length === 0) {
+      el.innerHTML = '';
+      return;
+    }
+    let h = `<button class="gchip active" onclick="filterCategory(null)">All</button>`;
+    cats.forEach(c => {
+      const name = c.name || c.category || c.label || '';
+      if (name) h += `<button class="gchip" onclick="filterCategory('${name}')">${name}</button>`;
+    });
+    el.innerHTML = h;
+  } catch(e) {
+    el.innerHTML = '';
+  }
+}
+
+async function loadProducersPage() {
+  const grid = document.getElementById('producersGrid');
+  grid.innerHTML = '<div class="loader-wrap"><div class="loader-dots"><span></span><span></span><span></span></div></div>';
   
   try {
-    const [det, cred, arDet, vid] = await Promise.all([
-      fetch(`${BASE}/${type}/${id}?api_key=${API}&language=${EN}`).then(r=>r.json()),
-      fetch(`${BASE}/${type}/${id}/credits?api_key=${API}&language=${EN}`).then(r=>r.json()),
-      fetch(`${BASE}/${type}/${id}?api_key=${API}&language=${AR}`).then(r=>r.json()),
-      fetch(`${BASE}/${type}/${id}/videos?api_key=${API}`).then(r=>r.json()).catch(()=>({results:[]}))
-    ]);
+    const data = await apiFetch('/producers/', { count: 50, offset: 0, sort: 'date' });
+    const prods = data.producers || data.results || [];
+    producers = prods;
     
-    renderDetail(det, cred, arDet, vid, type);
+    if (prods.length === 0) {
+      grid.innerHTML = '<div class="loader-wrap" style="grid-column:1/-1;color:var(--text3);">No producers found</div>';
+      return;
+    }
+    
+    grid.innerHTML = prods.map(p => {
+      const name = p.producerName || p.name || p.studio || 'Unknown';
+      const logo = p.logo || p.avatar || p.image || p.thumb || '';
+      const count = p.count || p.sceneCount || p.videoCount || p.scenes || 0;
+      const prodId = p.producerId || p.id || '';
+      return `
+        <div class="mcard" onclick="openProducerPage('${prodId}', '${name.replace(/'/g, "\\'")}')">
+          <div class="mcard-poster" style="height:200px;display:flex;align-items:center;justify-content:center;background:var(--surface2);">
+            ${logo ? `<img src="${logo}" alt="${name}" style="max-width:80%;max-height:80%;object-fit:contain;">` : `<div class="no-img"><i class="fas fa-building"></i></div>`}
+          </div>
+          <div class="mcard-info">
+            <h3 style="text-align:center;">${name}</h3>
+            <span style="text-align:center;display:block;">${count} videos</span>
+          </div>
+        </div>
+      `;
+    }).join('');
   } catch(e) {
-    document.getElementById('detailContent').innerHTML = '<p style="color:var(--text3);text-align:center;padding:40px;">Failed to load details.</p>';
+    grid.innerHTML = '<div class="loader-wrap" style="grid-column:1/-1;color:var(--text3);">Error loading producers</div>';
   }
 }
 
-function renderDetail(det, cred, arDet, vid, type) {
-  const title = det.title || det.name;
-  const year = (det.release_date || det.first_air_date || '').slice(0,4);
-  const rating = det.vote_average ? det.vote_average.toFixed(1) : '—';
-  const poster = det.poster_path ? IMG + det.poster_path : '';
-  const backdrop = det.backdrop_path ? ORIG + det.backdrop_path : '';
-  const runtime = det.runtime ? `${Math.floor(det.runtime/60)}h ${det.runtime%60}m` : (det.episode_run_time?.[0] ? `${det.episode_run_time[0]}m` : '');
-  const genres = (det.genres || []).map(g => g.name);
-  const overview = arDet.overview || det.overview || 'No description available.';
-  const cast = (cred.cast || []).slice(0, 15);
-  const trailer = vid.results.find(v => v.type === 'Trailer' && v.site === 'YouTube')?.key || vid.results.find(v => v.site === 'YouTube')?.key;
-  const embedUrl = type === 'movie'
-    ? `https://vsembed.ru/embed/movie?tmdb=${det.id}&ds_lang=ar`
-    : `https://vsembed.ru/embed/tv?tmdb=${det.id}&season=1&episode=1&ds_lang=ar`;
+async function openProducerPage(prodId, prodName) {
+  const page = document.getElementById('pageLatest');
+  page.classList.add('active');
+  document.querySelectorAll('.page').forEach(p => { if (p.id !== 'pageLatest') p.classList.remove('active'); });
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   
-  document.getElementById('detailHeroBg').innerHTML = backdrop ? 
-    `<img src="${backdrop}" alt="">` : '';
+  document.getElementById('categoryChips').innerHTML = '';
+  const grid = document.getElementById('latestGrid');
+  grid.innerHTML = '<div class="loader-wrap"><div class="loader-dots"><span></span><span></span><span></span></div></div>';
+  document.getElementById('latestPag').innerHTML = '';
   
-  // TV selectors
-  if (type === 'tv') {
-    document.getElementById('tvSel').classList.add('show');
-    const ssel = document.getElementById('seasonSel');
-    ssel.innerHTML = '';
-    (det.seasons || []).filter(s => s.season_number > 0).forEach(s => {
-      ssel.innerHTML += `<option value="${s.season_number}">${s.season_number}</option>`;
-    });
-    updateEpSel();
-  } else {
-    document.getElementById('tvSel').classList.remove('show');
+  try {
+    const data = await apiFetch('/scenes/', { count: ITEMS_PER_PAGE, offset: 0, sort: 'date', producerId: prodId, producerName: prodName });
+    const scenes = data.scenes || data.results || data.videos || [];
+    if (scenes.length) {
+      grid.innerHTML = `
+        <div style="grid-column:1/-1;margin-bottom:20px;">
+          <h2 style="font-size:28px;font-weight:800;margin-bottom:8px;font-family:'Playfair Display',serif;">${prodName}</h2>
+          <p style="color:var(--text2);font-size:14px;">${scenes.length} videos found</p>
+        </div>
+      ` + scenes.map(s => videoCardHTML(s)).join('');
+    } else {
+      grid.innerHTML = '<div class="loader-wrap" style="grid-column:1/-1;color:var(--text3);">No videos found</div>';
+    }
+  } catch(e) {
+    grid.innerHTML = '<div class="loader-wrap" style="grid-column:1/-1;color:var(--text3);">Error loading</div>';
   }
+}
+
+async function openDetail(scene) {
+  if (typeof scene === 'string') {
+    try { scene = JSON.parse(scene); } catch(e) { return; }
+  }
+  
+  currentDetail = scene;
+  const overlay = document.getElementById('detailOverlay');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  
+  const title = scene.title || scene.sceneName || scene.name || 'Untitled';
+  const thumb = scene.thumb || scene.previewImage || scene.thumbnail || scene.poster || '';
+  const dur = scene.duration || scene.lengthSeconds || '';
+  const views = scene.views || scene.viewCount || '';
+  const date = scene.date || scene.datePublished || '';
+  const prod = scene.producerName || scene.producer || scene.studio || '';
+  const desc = scene.description || scene.synopsis || '';
+  const categories = scene.categories || scene.tags || scene.tagsList || [];
+  const cast = scene.actors || scene.models || scene.cast || [];
+  const vidUrl = scene.videoUrl || scene.url || scene.src || scene.trailerUrl || '';
+  
+  document.getElementById('detailPlayer').classList.remove('show');
+  const videoEl = document.getElementById('playerVideo');
+  videoEl.src = '';
+  
+  document.getElementById('detailHeroBg').innerHTML = thumb ? 
+    `<img src="${thumb}" alt="" onerror="this.parentElement.style.background='var(--surface2)'">` : '';
+  
+  const catTags = Array.isArray(categories) ? categories : (typeof categories === 'string' ? categories.split(',').map(c => c.trim()) : []);
+  const castArr = Array.isArray(cast) ? cast : (typeof cast === 'string' ? cast.split(',').map(c => c.trim()) : []);
   
   document.getElementById('detailContent').innerHTML = `
     <div class="detail-top">
       <div class="detail-poster">
-        ${poster ? `<img src="${poster}" alt="${title}">` : '<div class="no-img" style="aspect-ratio:2/3;"><i class="fas fa-film"></i></div>'}
+        ${thumb ? `<img src="${thumb}" alt="${title}">` : '<div class="no-img" style="aspect-ratio:2/3;"><i class="fas fa-play"></i></div>'}
       </div>
       <div class="detail-meta">
         <h2 class="detail-title">${title}</h2>
-        <div class="detail-tags">${genres.map(g => `<span class="dtag">${g}</span>`).join('')}</div>
+        ${catTags.length > 0 ? `<div class="detail-tags">${catTags.map(c => `<span class="dtag">${c}</span>`).join('')}</div>` : ''}
         <div class="detail-stats">
-          <span class="rtg"><i class="fas fa-star"></i> ${rating}</span>
-          <span>${year}</span>
-          ${runtime ? `<span><i class="fas fa-clock" style="margin-right:4px;"></i>${runtime}</span>` : ''}
-          <span style="color:var(--accent);text-transform:uppercase;letter-spacing:1px;font-weight:600;">${type==='tv'?'TV Series':'Movie'}</span>
+          ${prod ? `<span style="color:var(--accent);font-weight:600;">${prod}</span>` : ''}
+          ${views ? `<span><i class="fas fa-eye" style="margin-right:4px;"></i>${formatViews(views)} views</span>` : ''}
+          ${dur ? `<span><i class="fas fa-clock" style="margin-right:4px;"></i>${dur}</span>` : ''}
+          ${date ? `<span>${date}</span>` : ''}
         </div>
         <div class="detail-acts">
-          <button class="btn-d-play" onclick="playContent('${embedUrl}')"><i class="fas fa-play"></i> Watch Now</button>
-          ${trailer ? `<button class="btn-d-trailer" onclick="playTrailer('${trailer}')"><i class="fas fa-film"></i> Trailer</button>` : ''}
+          <button class="btn-d-play" onclick="playVideo()"><i class="fas fa-play"></i> Watch Now</button>
         </div>
       </div>
     </div>
-    <p class="detail-plot">${overview}</p>
-    ${cast.length > 0 ? `
+    ${desc ? `<p class="detail-plot">${desc}</p>` : ''}
+    ${castArr.length > 0 ? `
       <h3 style="font-size:16px;font-weight:600;margin-bottom:16px;">Cast</h3>
       <div class="cast-grid">
-        ${cast.map(c => `
-          <div class="cast-item">
-            <div class="cast-img">
-              ${c.profile_path ? `<img src="${IMG}${c.profile_path}" alt="${c.name}">` : '<div class="empty-c"><i class="fas fa-user"></i></div>'}
+        ${castArr.map(c => {
+          const name = typeof c === 'string' ? c : (c.name || c.actor || c.model || 'Unknown');
+          const img = typeof c === 'object' ? (c.image || c.thumb || c.avatar || '') : '';
+          return `
+            <div class="cast-item">
+              <div class="cast-img">
+                ${img ? `<img src="${img}" alt="${name}">` : '<div class="empty-c"><i class="fas fa-user"></i></div>'}
+              </div>
+              <div class="cast-name">${name}</div>
             </div>
-            <div class="cast-name">${c.name}</div>
-          </div>
-        `).join('')}
+          `;
+        }).join('')}
       </div>
     ` : ''}
   `;
 }
 
-function playContent(url) {
-  const player = document.getElementById('detailPlayer');
-  player.classList.add('show');
-  document.getElementById('playerIframe').src = url;
-  player.scrollIntoView({ behavior: 'smooth' });
-}
-
-function updateEpSel() {
-  const esel = document.getElementById('epSel');
-  esel.innerHTML = '';
-  for (let i = 1; i <= 30; i++) esel.innerHTML += `<option value="${i}">${i}</option>`;
-  loadEp();
-}
-
-function loadEp() {
-  if (currentDetail?.type === 'tv') {
-    const s = document.getElementById('seasonSel').value;
-    const e = document.getElementById('epSel').value;
-    playContent(`https://vsembed.ru/embed/tv?tmdb=${currentDetail.id}&season=${s}&episode=${e}&ds_lang=ar`);
+function playVideo() {
+  const scene = currentDetail;
+  if (!scene) return;
+  const vidUrl = scene.videoUrl || scene.url || scene.src || scene.trailerUrl || scene.previewUrl || '';
+  
+  if (!vidUrl) {
+    alert('No video URL available');
+    return;
   }
+  
+  const player = document.getElementById('detailPlayer');
+  const videoEl = document.getElementById('playerVideo');
+  player.classList.add('show');
+  videoEl.src = vidUrl;
+  videoEl.play().catch(() => {});
+  player.scrollIntoView({ behavior: 'smooth' });
 }
 
 function closeDetail() {
   document.getElementById('detailOverlay').classList.remove('open');
-  document.getElementById('playerIframe').src = '';
+  const videoEl = document.getElementById('playerVideo');
+  videoEl.pause();
+  videoEl.src = '';
   document.body.style.overflow = '';
+  currentDetail = null;
 }
 
-// TRAILER
-function playTrailer(key) {
-  document.getElementById('trailerFrame').src = `https://www.youtube.com/embed/${key}?autoplay=1`;
-  document.getElementById('trailerModal').classList.add('show');
-}
-function closeTrailer() {
-  document.getElementById('trailerModal').classList.remove('show');
-  document.getElementById('trailerFrame').src = '';
-}
-
-// SEARCH
 function toggleSearch() {
   const panel = document.getElementById('searchPanel');
   const overlay = document.getElementById('searchOverlay');
@@ -1407,35 +1348,37 @@ function toggleSearch() {
   document.getElementById('searchResults').innerHTML = '';
 }
 
-let sTimer = null;
 function handleSearch(q) {
-  clearTimeout(sTimer);
+  clearTimeout(searchTimer);
   if (!q.trim()) { document.getElementById('searchResults').innerHTML = ''; return; }
-  sTimer = setTimeout(() => doSearch(q), 400);
+  searchTimer = setTimeout(() => doSearch(q), 500);
 }
 
 async function doSearch(q) {
   const el = document.getElementById('searchResults');
   el.innerHTML = '<div class="loader-wrap"><div class="loader-dots"><span></span><span></span><span></span></div></div>';
+  
   try {
-    const r = await fetch(`${BASE}/search/multi?api_key=${API}&language=${EN}&query=${encodeURIComponent(q)}`);
-    const d = await r.json();
-    const items = (d.results || []).filter(i => i.media_type === 'movie' || i.media_type === 'tv').slice(0, 12);
-    if (!items.length) {
-      el.innerHTML = '<p style="text-align:center;color:var(--text3);padding:30px;">No results</p>';
+    const data = await apiFetch('/scenes/', { count: 12, offset: 0, sort: 'relevance', q: q });
+    const scenes = data.scenes || data.results || data.videos || [];
+    
+    if (!scenes.length) {
+      el.innerHTML = '<p style="text-align:center;color:var(--text3);padding:30px;">No results found</p>';
       return;
     }
-    el.innerHTML = items.map(item => {
-      const title = item.title || item.name || 'Unknown';
-      const year = (item.release_date || item.first_air_date || '').slice(0,4);
-      const poster = item.poster_path ? IMG + item.poster_path : '';
-      const t = item.media_type === 'tv' ? 'TV' : 'Movie';
+    
+    el.innerHTML = scenes.map(item => {
+      const title = item.title || item.sceneName || item.name || 'Untitled';
+      const thumb = item.thumb || item.previewImage || item.thumbnail || item.poster || '';
+      const prod = item.producerName || item.producer || item.studio || '';
+      const views = item.views || item.viewCount || '';
+      
       return `
-        <div class="search-item" onclick="openDetail(${item.id}, '${item.media_type}'); toggleSearch();">
-          ${poster ? `<img src="${poster}" alt="">` : '<div style="width:50px;height:75px;background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-film" style="color:var(--text3);"></i></div>'}
+        <div class="search-item" onclick="openDetail(${JSON.stringify(item).replace(/"/g, '&quot;')}); toggleSearch();">
+          ${thumb ? `<img src="${thumb}" alt="" onerror="this.style.display='none'">` : '<div style="width:60px;height:90px;background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-play" style="color:var(--text3);"></i></div>'}
           <div class="search-item-info">
             <h4>${title}</h4>
-            <span>${year} · ${t}</span>
+            <span>${prod || ''}${prod && views ? ' · ' : ''}${views ? formatViews(views) + ' views' : ''}</span>
           </div>
         </div>
       `;
@@ -1445,7 +1388,6 @@ async function doSearch(q) {
   }
 }
 
-// SCROLL
 function scrollToTop() {
   const page = document.querySelector('.page.active');
   if (page) page.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1458,20 +1400,18 @@ document.querySelectorAll('.page').forEach(page => {
   });
 });
 
-// KEYBOARD
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     closeDetail();
-    closeTrailer();
     if (document.getElementById('searchPanel').classList.contains('open')) toggleSearch();
   }
 });
 
-// INIT
 document.addEventListener('DOMContentLoaded', async () => {
-  await Promise.all([loadGenres('movie'), loadGenres('tv')]);
   loadHero();
   loadHome();
+  loadCategories();
+  startHeroTimer();
 });
 </script>
 </body>
